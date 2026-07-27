@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,450&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Noto+Serif+Myanmar:wght@400;700&family=Noto+Sans+Myanmar:wght@400;500;700&display=swap');
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', 'Noto Sans Myanmar', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Playfair Display', 'Noto Serif Myanmar', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --color-warm-bg: #FAF8F5;
+  --color-brand-red: #A23B24;
+  --color-brand-charcoal: #1C1C1C;
+}
+
+/* Base style resets and customizations */
+body {
+  background-color: #FAF8F5;
+  color: #1C1C1C;
+}
+
+h1, h2, h3, h4, h5, .serif-theme {
+  font-family: var(--font-serif);
+}
+
+/* Custom Scrollbars to match editorial look */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E5E0D8;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A23B24;
+}
+
+/* Leaflet integration styling */
+.leaflet-div-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Animations matching the screenshots */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideDown {
+  from { height: 0; opacity: 0; overflow: hidden; }
+  to { height: auto; opacity: 1; }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.35s ease-out forwards;
+}

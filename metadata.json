@@ -1,0 +1,10 @@
+{
+  "name": "Final Yangon Travel Directory",
+  "description": "An advanced travel directory for Yangon with advanced searching, bilingual (English and Burmese) support, interactive maps, related place recommendations, and route plotting.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
